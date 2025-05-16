@@ -1,0 +1,19 @@
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  #navbar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 2px solid #ccc;
+  }
+
+  #main-doc {
+    margin-left: 0;
+    width: 100%;
+  }
+}
