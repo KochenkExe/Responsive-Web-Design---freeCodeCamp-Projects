@@ -2,90 +2,189 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Technical Documentation Page</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <nav id="navbar">
-      <header>Technical Documentation</header>
-      <a href="#Introduction" class="nav-link">Introduction</a>
-      <a href="#Getting_Started" class="nav-link">Getting Started</a>
-      <a href="#Basic_Syntax" class="nav-link">Basic Syntax</a>
-      <a href="#Data_Types" class="nav-link">Data Types</a>
-      <a href="#Control_Flow" class="nav-link">Control Flow</a>
+      <header>CSS: Cascading Style Sheets</header>
+      <a class="nav-link" href="#introduction">Introduction</a>
+      <a class="nav-link" href="#styling-basics">CSS Styling Basics</a>
+      <a class="nav-link" href="#syntax-basics">CSS Syntax Basics</a>
+      <a class="nav-link" href="#basic-selectors">Basic CSS Selectors</a>
+      <a class="nav-link" href="#text-styling">CSS Text Styling</a>
+      <a class="nav-link" href="#reference">Reference</a>
     </nav>
-
     <main id="main-doc">
-      <section class="main-section" id="Introduction">
+      <section class="main-section" id="introduction">
         <header>Introduction</header>
         <p>
-          Welcome to the technical documentation. This guide will help you
-          understand the basics of programming.
+          Cascading Style Sheets (CSS) is a stylesheet language used to describe
+          the presentation of a document written in HTML or XML (including XML
+          dialects such as SVG, MathML or XHTML). CSS describes how elements
+          should be rendered on screen, on paper, in speech, or on other media.
         </p>
         <p>
-          In this documentation, you'll learn about various programming concepts
-          and how to implement them.
+          CSS is among the core languages of the open web and is standardized
+          across Web browsers according to W3C specifications. Previously, the
+          development of various parts of CSS specification was done
+          synchronously, which allowed the versioning of the latest
+          recommendations. You might have heard about CSS1, CSS2.1, or even
+          CSS3. There will never be a CSS3 or a CSS4; rather, everything is now
+          just "CSS" with individual CSS modules having version numbers.
         </p>
-        <code>console.log("Hello, World!");</code>
-        <ul>
-          <li>Basic concepts</li>
-          <li>Advanced topics</li>
-        </ul>
       </section>
-
-      <section class="main-section" id="Getting_Started">
-        <header>Getting Started</header>
+      <section class="main-section" id="styling-basics">
+        <header>CSS Styling Basics</header>
         <p>
-          To begin your programming journey, you'll need to set up your
-          development environment.
+          CSS (Cascading Style Sheets) allows you to create great-looking web
+          pages, but how does it work under the hood? This article explains what
+          CSS, what the basic syntax looks like, and how your browser applies
+          CSS to HTML to style it.
         </p>
-        <p>Follow these steps to get started with your first program.</p>
-        <code>npm install package-name</code>
-        <ul>
-          <li>Install required tools</li>
-          <li>Configure your environment</li>
-        </ul>
       </section>
-
-      <section class="main-section" id="Basic_Syntax">
-        <header>Basic Syntax</header>
+      <section class="main-section" id="syntax-basics">
+        <header>CSS Syntax Basics</header>
         <p>
-          Understanding basic syntax is crucial for writing clean and efficient
-          code.
+          CSS is a rule-based language — you define rules by specifying groups
+          of styles that should be applied to particular element or groups of
+          elements on your web page.
         </p>
-        <p>Let's explore the fundamental syntax rules and conventions.</p>
-        <code>function example() { return true; }</code>
-        <ul>
-          <li>Variables and constants</li>
-          <li>Functions and methods</li>
-        </ul>
+        <p>
+          For example, you might decide to style the main heading on your page
+          as large red text. The following code shows a very simple CSS rule
+          that would achieve this:
+        </p>
+        <code> h1 { color: red; font-size: 2.5em; } </code>
+        <p>
+          Different CSS properties have different allowable values. In our
+          example, we have the color property, which can take various color
+          values. We also have the font-size property. This property can take
+          various size units as a value.
+        </p>
+        <p>
+          A CSS stylesheet contains many such rules, written one after the
+          other.
+        </p>
+        <code
+          >h1 { color: red; font-size: 2.5em; } p { color: aqua; padding: 5px;
+          background: midnightblue; }
+        </code>
       </section>
-
-      <section class="main-section" id="Data_Types">
-        <header>Data Types</header>
-        <p>Different programming languages support various data types.</p>
+      <section class="main-section" id="basic-selectors">
+        <header>Basic CSS selectors</header>
         <p>
-          Understanding data types is essential for proper data manipulation.
+          You've already seen how, in CSS, selectors are used to target the HTML
+          elements on our web pages that we want to style. There are a wide
+          variety of CSS selectors available, allowing for fine-grained
+          precision when selecting elements to style, and in the next few
+          articles we'll look at the different types in depth. In this article
+          we'll recap some selector fundamentals, including the basic type,
+          class, and ID selectors, and selector lists. We'll also introduce the
+          universal selector.
         </p>
-        <code>let number = 42;</code>
+        <p>
+          A CSS selector is the first part of a CSS Rule. It is a pattern of
+          elements and other terms that tell the browser which HTML elements
+          should be selected to have the CSS property values inside the rule
+          applied to them. The element or elements which are selected by the
+          selector are referred to as the subject of the selector.
+        </p>
         <ul>
-          <li>Primitive types</li>
-          <li>Complex types</li>
+          <li>Type Selector</li>
+          <li>Class Selector</li>
+          <li>ID Selector</li>
+          <li>Universal Selector</li>
         </ul>
+        <h3>Type Selector</h3>
+        <p>
+          A type selector is sometimes referred to as a tag name selector or
+          element selector because it selects an HTML tag/element in your
+          document. In the example below, we have used the span, em and strong
+          selectors.
+        </p>
+        <code>body { font-family: sans-serif; } </code>
+        <h3>Class Selector</h3>
+        <p>
+          The case-sensitive class selector starts with a dot (.) character. It
+          will select everything in the document with that class applied to it.
+          In the live example below we have created a class called highlight,
+          and have applied it to several places in my document. All of the
+          elements that have the class applied are highlighted.
+        </p>
+        <code>.highlight { background-color: yellow; }</code>
+        <h3>ID Selector</h3>
+        <p>
+          The case-sensitive ID selector begins with a # rather than a dot
+          character, but is used in the same way as a class selector. The
+          difference is that an ID can be used only once per page, and elements
+          can only have a single id value applied to them. It can select an
+          element that has the id set on it, and you can precede the ID with a
+          type selector to only target the element if both the element and ID
+          match. You can see both of these uses in the following example:
+        </p>
+        <code>#one { background-color: yellow; }</code>
+        <h3>Universal Selector</h3>
+        <p>
+          The universal selector is indicated by an asterisk (*). It selects
+          everything in the document. If * is chained using a descendant
+          combinator, it selects everything inside that ancestor element. For
+          example, p * selects all the nested elements inside the p element.
+        </p>
+        <code> * { margin: 0; } </code>
       </section>
-
-      <section class="main-section" id="Control_Flow">
-        <header>Control Flow</header>
+      <section class="main-section" id="text-styling">
+        <header>CSS Text Styling</header>
         <p>
-          Control flow statements determine the order in which code executes.
+          The CSS properties used to style text generally fall into two
+          categories, which we'll look at separately in this article:
         </p>
-        <p>Learn about conditionals, loops, and other control structures.</p>
-        <code>if (condition) { // code }</code>
         <ul>
-          <li>Conditional statements</li>
-          <li>Loop structures</li>
+          <li>
+            Font styles: Properties that affect a text's font, e.g., which font
+            gets applied, its size, and whether it's bold, italic, etc.
+          </li>
+          <li>
+            Text layout styles: Properties that affect the spacing and other
+            layout features of the text, allowing manipulation of, for example,
+            the space between lines and letters, and how the text is aligned
+            within the content box.
+          </li>
         </ul>
+        <h3>Color</h3>
+        <p>
+          The color property sets the color of the foreground content of the
+          selected elements, which is usually the text, but can also include a
+          couple of other things, such as an underline or overline placed on
+          text using the text-decoration property.
+        </p>
+        <code>p { color: red; } </code>
+        <h3>Font Families</h3>
+        <p>
+          To set a different font for your text, you use the font-family
+          property — this allows you to specify a font (or list of fonts) for
+          the browser to apply to the selected elements. The browser will only
+          apply a font if it is available on the machine the website is being
+          accessed on; if not, it will just use a browser default font. A simple
+          example looks like so:
+        </p>
+        <code>p { font-family: Arial; } </code>
+      </section>
+      <section class="main-section" id="reference">
+        <header>Reference</header>
+        <p>
+          All the documentation in this page is taken from
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn_web_development"
+            >MDN</a
+          >
+        </p>
       </section>
     </main>
   </body>
